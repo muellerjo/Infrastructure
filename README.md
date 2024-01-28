@@ -28,7 +28,7 @@ insert the following content
 ServerName mqtt.muellerjonas.de
 
 RewriteEngine on
-RewriteCond %{SERVER_NAME} =cloud.mtwt.de
+RewriteCond %{SERVER_NAME} =mqtt.muellerjonas.de
 RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 </VirtualHost>
 ```
