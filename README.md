@@ -11,9 +11,9 @@ docker pull eclipse-mosquitto
 
 ```
 docker run -d -p 1883:1883 -p 9001:9001 --name mosquitto --restart always eclipse-mosquitto 
-
 ```
 
+```
 connection bridge1
 address eu1.cloud.thethings.network:1883
 start_type automatic
@@ -36,3 +36,4 @@ remote_password <>
 try_private false
 #bridge_insecure false
 cleansession true
+```
