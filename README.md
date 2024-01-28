@@ -13,6 +13,20 @@ docker pull eclipse-mosquitto
 docker run -d -p 1883:1883 -p 9001:9001 --name mosquitto --restart always eclipse-mosquitto 
 ```
 
+### Prepare Webserver for DNS / Domain
+
+```
+<VirtualHost *:80>
+
+ServerName cloud.mtwt.de
+
+RewriteEngine on
+RewriteCond %{SERVER_NAME} =cloud.mtwt.de
+RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+</VirtualHost>
+```
+
+
 ```
 connection bridge1
 address eu1.cloud.thethings.network:1883
