@@ -81,6 +81,7 @@ Include /etc/letsencrypt/options-ssl-apache.conf
 </IfModule>
 ```
 
+Configure Mosquitto in Homeassistant in order to receive MQTT-messages
 
 ```
 connection bridge1
